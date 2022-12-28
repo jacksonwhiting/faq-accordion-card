@@ -7,64 +7,93 @@
 	<!-- displays site properly based on user's device -->
 
 	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kumbh Sans:400,700&display=swap">
 	<link rel="stylesheet" href="/styles.css">
 
 	<title>Frontend Mentor | FAQ Accordion Card</title>
 </head>
 
 <body>
-	<main>
-		<article>
-			<div>
-				<img src="/images/illustration-woman-online-mobile.svg" alt="Girl working online">
+	<main class="main__container container--center">
+		<article class="faq container--center">
+			<div class="faq__image-container">
+				<div>
+					<img class="faq__mobile-image" src="/images/illustration-woman-online-mobile.svg"
+						alt="Girl working online" loading="lazy">
+					<img class="item--hide faq__desktop-woman" src="/images/illustration-woman-online-desktop.svg" alt=""
+						loading="lazy">
+				</div>
+				<div class="faq__image--background">
+					<img class="faq__mobile-background-image" src="images/bg-pattern-mobile.svg" loading="lazy">
+				</div>
+				<div>
+					<img class="item--hide faq__desktop-box" src="/images/illustration-box-desktop.svg" alt="">
+				</div>
 			</div>
-			<h1>FAQ</h1>
-			<div>
-				<h2>How many team members can I invite?
-					<span><img src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
-				</h2>
-				<p>You can invite up to 2 additional users on the Free plan. There is no limit on
-					team members for the Premium plan.
-				</p>
+
+			<div class="card">
+				<h1 class="faq__title">FAQ</h1>
+				<div class="faq__question-container ">
+					<div class="faq__question-accordion js-question-container">
+						<h2 data-question="1" class="faq__question-text">How many team members can I invite?</h2>
+						<span data-question="1" class="question-accordion--arrow"><img id="js-arrow"
+								src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
+					</div>
+					<p data-question="1" class="faq__answer js-hide">You can invite up to 2 additional users on the Free
+						plan. There
+						is no
+						limit on
+						team members for the Premium plan.
+					</p>
+				</div>
+				<!-- <hr class="divider"> -->
+				<div class="faq__question-container">
+					<div class="faq__question-accordion js-question-container">
+						<h2 class="faq__question-text">What is the maximum file upload size?</h2>
+						<span class="question-accordion--arrow"> <img id="js-arrow" src="/images/icon-arrow-down.svg"
+								alt="accordion arrow"></span>
+					</div>
+					<p class="faq__answer js-hide">No more than 2GB. All files in your account must fit your allotted
+						storage space.
+					</p>
+				</div>
+				<div class="faq__question-container">
+					<div class="faq__question-accordion js-question-container">
+						<h2 class="faq__question-text">How do I reset my password?</h2>
+						<span class="question-accordion--arrow"> <img id="js-arrow" src="/images/icon-arrow-down.svg"
+								alt="accordion arrow"></span>
+					</div>
+					<p class="faq__answer js-hide"> Click “Forgot password” from the login page or “Change password” from
+						your
+						profile page.
+						A reset link will be emailed to you.
+					</p>
+				</div>
+				<div class="faq__question-container">
+					<div class="faq__question-accordion js-question-container">
+						<h2 class="faq__question-text">Can I cancel my subscription?</h2>
+						<span class="question-accordion--arrow"> <img id="js-arrow" src="/images/icon-arrow-down.svg"
+								alt="accordion arrow"></span>
+					</div>
+					<p class="faq__answer js-hide">Yes! Send us a message and we’ll process your request no
+						questions asked.
+					</p>
+				</div>
+				<div class="faq__question-container">
+					<div class="faq__question-accordion js-question-container">
+						<h2 class="faq__question-text">Do you provide additional support?</h2>
+						<span class="question-accordion--arrow"> <img id="js-arrow" src="/images/icon-arrow-down.svg"
+								alt="accordion arrow"></span>
+					</div>
+					<p class="faq__answer js-hide">Chat and email support is available 24/7. Phone lines are open during
+						normal business hours.
+					</p>
+				</div>
 			</div>
-			<hr>
-			<div>
-				<h2>What is the maximum file upload size?
-					<span><img src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
-				</h2>
-				<p>No more than 2GB. All files in your account must fit your allotted
-					storage space.
-				</p>
-			</div>
-			<hr>
-			<div>
-				<h2>How do I reset my password?
-					<span><img src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
-				</h2>
-				<p> Click “Forgot password” from the login page or “Change password” from your profile page.
-					A reset link will be emailed to you.
-				</p>
-			</div>
-			<hr>
-			<div>
-				<h2>Can I cancel my subscription?
-					<span><img src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
-				</h2>
-				<p>Yes! Send us a message and we’ll process your request no questions asked.</p>
-			</div>
-			<hr>
-			<div>
-				<h2> Do you provide additional support?
-					<span><img src="/images/icon-arrow-down.svg" alt="accordion arrow"></span>
-				</h2>
-				<p>Chat and email support is available 24/7. Phone lines are open during
-					normal business hours.
-				</p>
-			</div>
-			<hr>
+
 		</article>
 	</main>
+	<script src="/app.js"></script>
 </body>
 
 </html>
